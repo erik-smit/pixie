@@ -8,7 +8,9 @@ Usage
 
 - Setup tftpd, httpd pointing to /srv/tftp
 - Put pxelinux in /srv/tftp
-- ```
+
+- Setup pixie 
+```
 cd /srv/tftp
 mkdir pxelinux.cfg
 git clone git@github.com:erik-smit/pixie
@@ -16,7 +18,7 @@ cd pixie
 for i in scripts/*; do $i; done
 make
 ```
-- dhcpd.conf 
+- Config dhcpd.conf 
 ```
 group {
   filename "gpxelinux.0";

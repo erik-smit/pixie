@@ -1,7 +1,16 @@
 pixie
 =====
 
-W.I.P
+Documentation is WIP. Minimal for now.
+
+Demo
+----
+
+```
+wget http://pixie.zoiah.net/ipxe.iso
+kvm -cdrom ipxe.iso
+```
+
 
 Usage
 -----

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DESTDIR="../pxelinux.cfg/generated"
-DISTROS="precise oneiric natty maverick lucid hardy"
+DISTROS="quantal precise oneiric natty maverick lucid hardy"
 ARCHS="amd64 i386"
 
 (echo MENU BEGIN Ubuntu Linux;

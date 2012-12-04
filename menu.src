@@ -1,0 +1,16 @@
+#define SERVER  pixie.zoiah.net
+#define HTTPURL http://SERVER
+
+UI menu.c32
+
+MENU TITLE PXE menu
+
+LABEL localboot
+  LOCALBOOT 0
+
+INCLUDE pxelinux.cfg/arch.cfg
+INCLUDE pxelinux.cfg/generated/ubuntu.cfg
+INCLUDE pxelinux.cfg/generated/centos.cfg
+INCLUDE pxelinux.cfg/generated/scientific.cfg
+INCLUDE pxelinux.cfg/syslinux.cfg
+INCLUDE pxelinux.cfg/local.cfg

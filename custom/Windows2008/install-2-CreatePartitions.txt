@@ -1,0 +1,25 @@
+rem These commands are used with DiskPart to
+rem erase the drive and create three partitions
+rem for a BIOS/MBR-based computer.
+rem Adjust the partition sizes to fill the drive as necessary.
+select disk 0
+clean
+rem === 1. System partition =====================
+create partition primary size=350
+format quick fs=ntfs label="System"
+assign letter="S"
+active
+rem === 2. Windows partition ====================
+rem ==    a. Create Windows partition =========== 
+create partition primary
+rem ==    b. Create space for recovery image ====  
+shrink minimum=15000
+rem ==    c. Prepare the Windows partition ====== 
+format quick fs=ntfs label="Windows"
+assign letter="W"
+rem === 3. Recovery image partition =============
+create partition primary
+format quick fs=ntfs label="Recovery"
+assign letter="R"
+attributes volume set nodefaultdriveletter
+exit

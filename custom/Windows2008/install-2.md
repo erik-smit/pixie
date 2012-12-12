@@ -2,9 +2,9 @@
 ==============================
 
 ```
-net use \\bootsrv.example.com\data
-diskpart /s \\bootsrv.example.com\data\install-2-CreatePartitions.txt
-ImageX /apply \\bootsrv.example.com\data\Windows2008\install.wim 1 W:\
+net use Z: \\bootsrv.example.com\data
+diskpart /s Z:\install-2-CreatePartitions.txt
+ImageX /apply Z:\Extracted_ISO\sources\\install.wim 1 W:\
 
 bcdboot W:\Windows /s S:
 reboot

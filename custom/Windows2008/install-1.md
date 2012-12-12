@@ -3,5 +3,7 @@
 
 When WinPE is booted:
  
-net use \\bootsrv.example.com\data  
-\\bootsrv.example\data\Extracted-ISO\setup.exe  
+```
+net use \\bootsrv.example.com\data
+\\bootsrv.example\data\Extracted-ISO\setup.exe
+```

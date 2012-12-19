@@ -10,6 +10,7 @@ LABEL localboot
 
 INCLUDE pxelinux.cfg/arch.cfg
 INCLUDE pxelinux.cfg/generated/ubuntu.cfg
+INCLUDE pxelinux.cfg/generated/debian.cfg
 INCLUDE pxelinux.cfg/generated/centos.cfg
 INCLUDE pxelinux.cfg/generated/scientific.cfg
 INCLUDE pxelinux.cfg/syslinux.cfg

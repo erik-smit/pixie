@@ -8,10 +8,10 @@ ARCHS="amd64 i386"
 for DISARCH in $ARCHS; do
   echo MENU BEGIN $DISARCH
     for DISTRO in $DISTROS; do
-      URL="http://ftp.nl.debian.org/debian/dists/${DISTRO}/main/installer-${DISARCH}/current/images/netboot/debian-installer/${DISARCH}/"
+      URL="http://ftp.nl.debian.org/debian/dists/${DISTRO}/main/installer-${DISARCH}/current/images/netboot"
       echo LABEL Debian ${DISTRO} ${DISARCH}
-echo  CONFIG ${URL}pxelinux.cfg/default
-echo  APPEND ${URL}
+echo  CONFIG ${URL}/debian-installer/${DISARCH}/pxelinux.cfg/default
+echo  APPEND ${URL}/
   done
   echo MENU END
 done

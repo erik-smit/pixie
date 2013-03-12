@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DESTDIR="../pxelinux.cfg/generated"
+DESTDIR="../pxelinux.cfg"
 DISTROS="quantal precise oneiric natty maverick lucid hardy"
 ARCHS="amd64 i386"
 

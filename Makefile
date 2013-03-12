@@ -1,18 +1,30 @@
-# Makefile for preprocessing gpxelinux.0 menu config files
-# WB 2010-07-14
 
+GENSCRIPTS  = $(notdir $(wildcard scripts/*.sh))
+SRCFILES    = $(wildcard *.src)
 CPP=            /usr/bin/cpp
-DEST=           ../pxelinux.cfg/
-CFGNAME=        ${DEST}default
+DEST=           ../pxelinux.cfg
 PRINTF=         /usr/bin/printf
 RM=             /bin/rm
 SED=            /bin/sed
-SRCNAME=        menu
+SHELL := $(SHELL) -e
+
+vpath %.sh scripts
+
+OBJECTS := $(addprefix $(DEST)/, $(patsubst %.sh,%.cfg,$(GENSCRIPTS)))
+OBJECTS := $(OBJECTS) $(addprefix $(DEST)/, $(patsubst %.src,%.cfg,$(SRCFILES)))
 
 TAB!=           ${PRINTF} "\t"
 
-${CFGNAME}:     ${SRCNAME}.src
-	${CPP} -traditional-cpp ${SRCNAME}.src \
-	| ${SED} -e '/^[ ${TAB}]*#/d' -e '/^$$/d' > ${CFGNAME}
-	${CPP} -traditional-cpp local.src \
-	| ${SED} -e '/^[ ${TAB}]*#/d' -e '/^$$/d' > ${DEST}local.cfg
+all: $(OBJECTS)
+
+clean: 
+	-rm -f $(OBJECTS)
+
+$(DEST)/%.cfg: %.sh
+	$<
+
+$(DEST)/%.cfg: %.src
+	${CPP} -traditional-cpp $^ \
+	| ${SED} -e '/^[ ${TAB}]*#/d' -e '/^$$/d' > $@
+
+

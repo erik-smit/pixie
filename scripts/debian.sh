@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DESTDIR="../pxelinux.cfg/generated"
+DESTDIR="../pxelinux.cfg"
 DISTROS="squeeze wheezy sid"
 ARCHS="amd64 i386"
 

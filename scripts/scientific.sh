@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DESTDIR="../pxelinux.cfg/generated"
+DESTDIR="../pxelinux.cfg"
 DISTROS="6x"
 ARCHS="x86_64 i386"
 

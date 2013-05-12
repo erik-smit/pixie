@@ -1,4 +1,4 @@
-#define SERVER  pixie.zoiah.net
+#define SERVER pixie.zylon.net
 #define HTTPURL http://SERVER
 
 UI menu.c32
@@ -8,10 +8,11 @@ MENU TITLE PXE menu
 LABEL localboot
   LOCALBOOT 0
 
-INCLUDE pxelinux.cfg/arch.cfg
-INCLUDE pxelinux.cfg/generated/ubuntu.cfg
-INCLUDE pxelinux.cfg/generated/debian.cfg
-INCLUDE pxelinux.cfg/generated/centos.cfg
-INCLUDE pxelinux.cfg/generated/scientific.cfg
-INCLUDE pxelinux.cfg/syslinux.cfg
+INCLUDE pxelinux.cfg/puias.cfg
+INCLUDE pxelinux.cfg/scientific.cfg
+INCLUDE pxelinux.cfg/debian.cfg
+INCLUDE pxelinux.cfg/ubuntu.cfg
+INCLUDE pxelinux.cfg/centos.cfg
 INCLUDE pxelinux.cfg/local.cfg
+INCLUDE pxelinux.cfg/arch.cfg
+INCLUDE pxelinux.cfg/syslinux.cfg

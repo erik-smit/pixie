@@ -1,16 +1,7 @@
 pixie
 =====
 
-Documentation is WIP. Minimal for now.
-
-Demo
-----
-
-```
-wget http://pixie.zoiah.net/ipxe.iso
-kvm -cdrom ipxe.iso
-```
-
+WIP.
 
 Usage
 -----
@@ -24,7 +15,6 @@ cd /srv/tftp
 mkdir pxelinux.cfg
 git clone git@github.com:erik-smit/pixie
 cd pixie
-for i in scripts/*; do $i; done
 make
 ```
 - Config dhcpd.conf 

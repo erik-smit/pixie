@@ -8,11 +8,14 @@ MENU TITLE PXE menu
 LABEL localboot
   LOCALBOOT 0
 
+MENU BEGIN Linux
+INCLUDE pxelinux.cfg/arch.cfg
+INCLUDE pxelinux.cfg/centos.cfg
+INCLUDE pxelinux.cfg/debian.cfg
+INCLUDE pxelinux.cfg/opensuse.cfg
 INCLUDE pxelinux.cfg/puias.cfg
 INCLUDE pxelinux.cfg/scientific.cfg
-INCLUDE pxelinux.cfg/debian.cfg
 INCLUDE pxelinux.cfg/ubuntu.cfg
-INCLUDE pxelinux.cfg/centos.cfg
+MENU END
 INCLUDE pxelinux.cfg/local.cfg
-INCLUDE pxelinux.cfg/arch.cfg
 INCLUDE pxelinux.cfg/syslinux.cfg

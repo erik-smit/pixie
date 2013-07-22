@@ -5,7 +5,7 @@ DESTDIR="../pxelinux.cfg"
 DISTROS=`lftp $BASEURL -e 'ls;quit' 2> /dev/null | awk '{ print $5; }' | grep -v -- - | grep -v ^$`
 ARCHS="amd64 i386"
 
-(echo MENU BEGIN Ubuntu GNU/Linux;
+(echo MENU TITLE Ubuntu Linux;
 for DISARCH in $ARCHS; do
   echo MENU BEGIN $DISARCH
     for DISTRO in $DISTROS; do
@@ -22,5 +22,4 @@ for DISARCH in $ARCHS; do
   done
   echo MENU END
 done
-echo MENU END
 ) > ${DESTDIR}/ubuntu.cfg

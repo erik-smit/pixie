@@ -4,7 +4,7 @@ DESTDIR="../pxelinux.cfg"
 DISTROS="6"
 ARCHS="x86_64 i386"
 
-(echo MENU BEGIN PUIAS;
+(echo MENU TITLE PUIAS Linux;
 for DISARCH in $ARCHS; do
   echo MENU BEGIN $DISARCH
     for DISTRO in $DISTROS; do
@@ -27,6 +27,5 @@ for DISARCH in $ARCHS; do
   done
   echo MENU END
 done
-echo MENU END
 ) > ${DESTDIR}/puias.cfg
 

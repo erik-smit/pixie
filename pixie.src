@@ -1,0 +1,11 @@
+#define SERVER pixie.zylon.net
+#define HTTPURL http://SERVER
+
+MENU TITLE Pixie (NetInstall) Menu
+INCLUDE HTTPURL/pxelinux.cfg/arch.cfg ARCH Linux
+INCLUDE HTTPURL/pxelinux.cfg/centos.cfg CentOS Linux
+INCLUDE HTTPURL/pxelinux.cfg/debian.cfg Debian Linux
+INCLUDE HTTPURL/pxelinux.cfg/opensuse.cfg OpenSUSE Linux
+INCLUDE HTTPURL/pxelinux.cfg/puias.cfg PUIAS Linux
+INCLUDE HTTPURL/pxelinux.cfg/scientific.cfg Scientific Linux
+INCLUDE HTTPURL/pxelinux.cfg/ubuntu.cfg Ubuntu Linux

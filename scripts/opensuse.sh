@@ -5,7 +5,7 @@ DESTDIR="../pxelinux.cfg"
 DISTROS=`lftp $BASEURL -e 'ls;quit' 2> /dev/null | awk '{ print $5; }' | grep -v ^$`
 ARCHS="x86_64 i386"
 
-(echo MENU BEGIN OpenSUSE GNU/Linux
+(echo MENU TITLE OpenSUSE Linux
 for DISARCH in $ARCHS; do
   echo MENU BEGIN $DISARCH
     for DISTRO in $DISTROS; do
@@ -27,6 +27,5 @@ for DISARCH in $ARCHS; do
   done
   echo MENU END
 done
-echo MENU END
 ) > ${DESTDIR}/opensuse.cfg
 

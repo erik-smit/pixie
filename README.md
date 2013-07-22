@@ -36,7 +36,7 @@ If not, it will just load the vmlinuz and initrd with the required parameters.
 ![Screenshot 7](/img/pixie7.png)
 ![Screenshot 8](/img/pixie8.png)
 ![Screenshot 9](/img/pixie9.png)
-![Screenshot 10](/img/pixie10.png
+![Screenshot 10](/img/pixie10.png)
 
 ## Requirements
 

@@ -8,5 +8,6 @@ INCLUDE HTTPURL/pxelinux.cfg/debian.cfg Debian Linux
 INCLUDE HTTPURL/pxelinux.cfg/grml.cfg GRML Linux
 INCLUDE HTTPURL/pxelinux.cfg/opensuse.cfg OpenSUSE Linux
 INCLUDE HTTPURL/pxelinux.cfg/puias.cfg PUIAS Linux
+INCLUDE HTTPURL/pxelinux.cfg/rhel7.cfg Redhat Enterprise Linux
 INCLUDE HTTPURL/pxelinux.cfg/scientific.cfg Scientific Linux
 INCLUDE HTTPURL/pxelinux.cfg/ubuntu.cfg Ubuntu Linux
